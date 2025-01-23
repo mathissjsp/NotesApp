@@ -8,15 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var taken: Array = [""]
+    @State var taak: String = ""
+    
+    func voegTaakToe() {
+        taken.append("\(taak)")
+    }
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Text("ik ben mathis goffin")
+        NavigationStack{
+            Spacer()
+            VStack{
+                List{
+                    ForEach(taken, id: \.self) { taak in
+                        Text("\(taak)")
+                        
+                    }
+                }
+                TextField("voeg je taak toe", text: $taak)
+                Button(action: {
+                    voegTaakToe()
+                    taak = ""
+                }) {
+                    Text("Taak toevoegen").padding().padding(.horizontal, 100).background(.gray).cornerRadius(15).foregroundColor(.white)
+                }
+            }.padding()
+                .navigationTitle("taken")
+                
         }
-        .padding()
     }
 }
 
