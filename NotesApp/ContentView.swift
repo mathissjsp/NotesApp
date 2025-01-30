@@ -7,34 +7,47 @@
 
 import SwiftUI
 
+
+class TakenModel: ObservableObject {
+    @Published  var taken: [String]  = ["Test taak"]
+    
+    
+    func voegTaakToe(title: String) {
+        taken.append(title)
+    }
+    
+    func deleteItem(at offsets: IndexSet) {
+        taken.remove(atOffsets: offsets)
+    }
+}
 struct ContentView: View {
-    @State var taken: Array = [""]
+    @StateObject var model = TakenModel()
     @State var taak: String = ""
     
-    func voegTaakToe() {
-        taken.append("\(taak)")
-    }
+   
+    
     var body: some View {
         NavigationStack{
-            Spacer()
+           
             VStack{
                 List{
-                    ForEach(taken, id: \.self) { taak in
-                        Text("\(taak)")
+                    ForEach(model.taken, id: \.self) { taak in
+                        NavigationLink("\(taak)", destination: taakView())
                         
-                    }
+                    }.onDelete(perform: model.deleteItem)
                 }
-                TextField("voeg je taak toe", text: $taak)
+                TextField("voeg je taak toe", text: $taak).padding().background(.white).padding()
                 Button(action: {
-                    voegTaakToe()
+                    model.voegTaakToe(title: taak)
                     taak = ""
                 }) {
                     Text("Taak toevoegen").padding().padding(.horizontal, 100).background(.gray).cornerRadius(15).foregroundColor(.white)
                 }
-            }.padding()
-                .navigationTitle("taken")
-                
+            }
+            .navigationTitle("taken")
+            .background(Color(.systemGray6))
         }
+    
     }
 }
 

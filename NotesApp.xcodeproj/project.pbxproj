@@ -14,6 +14,7 @@
 		671503082D42514F00A5CD17 /* NotesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671503072D42514F00A5CD17 /* NotesAppTests.swift */; };
 		671503122D42514F00A5CD17 /* NotesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671503112D42514F00A5CD17 /* NotesAppUITests.swift */; };
 		671503142D42514F00A5CD17 /* NotesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671503132D42514F00A5CD17 /* NotesAppUITestsLaunchTests.swift */; };
+		671503212D4907E700A5CD17 /* taakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671503202D4907E700A5CD17 /* taakView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		6715030D2D42514F00A5CD17 /* NotesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		671503112D42514F00A5CD17 /* NotesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITests.swift; sourceTree = "<group>"; };
 		671503132D42514F00A5CD17 /* NotesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		671503202D4907E700A5CD17 /* taakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taakView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		671502F52D42514D00A5CD17 /* NotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				671503202D4907E700A5CD17 /* taakView.swift */,
 				671502F62D42514D00A5CD17 /* NotesAppApp.swift */,
 				671502F82D42514D00A5CD17 /* ContentView.swift */,
 				671502FA2D42514F00A5CD17 /* Assets.xcassets */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				671502F92D42514D00A5CD17 /* ContentView.swift in Sources */,
+				671503212D4907E700A5CD17 /* taakView.swift in Sources */,
 				671502F72D42514D00A5CD17 /* NotesAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
