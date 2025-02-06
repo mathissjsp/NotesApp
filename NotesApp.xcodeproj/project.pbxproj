@@ -96,8 +96,8 @@
 		671502F52D42514D00A5CD17 /* NotesApp */ = {
 			isa = PBXGroup;
 			children = (
-				671503202D4907E700A5CD17 /* taakView.swift */,
 				671502F62D42514D00A5CD17 /* NotesAppApp.swift */,
+				671503202D4907E700A5CD17 /* taakView.swift */,
 				671502F82D42514D00A5CD17 /* ContentView.swift */,
 				671502FA2D42514F00A5CD17 /* Assets.xcassets */,
 				671502FC2D42514F00A5CD17 /* Preview Content */,
